@@ -1,0 +1,44 @@
+========================
+ReconstCSAFlow
+========================
+
+Workflow for peaks computation. Peaks computation is done by 'globing'
+    ``input_files`` and saves the peaks in a directory specified by
+    ``out_dir``.
+
+Parameters
+----------
+input_files : string
+    Path to the input volumes. This path may contain wildcards to
+    process multiple inputs at once.
+bvalues : string
+    Path to the bvalues files. This path may contain wildcards to use
+    multiple bvalues files at once.
+bvectors : string
+    Path to the bvalues files. This path may contain wildcards to use
+    multiple bvalues files at once.
+mask_files : string
+    Path to the input masks. This path may contain wildcards to use
+    multiple masks at once. (default: No mask used)
+b0_threshold : float, optional
+    Threshold used to find b=0 directions
+extract_pam_values : bool, optional
+    Wheter or not to save pam volumes as single nifti files.
+out_dir : string, optional
+    Output directory (default input file directory)
+out_pam : string, optional
+    Name of the peaks volume to be saved (default 'peaks.pam5')
+out_shm : string, optional
+    Name of the shperical harmonics volume to be saved
+    (default 'shm.nii.gz')
+out_peaks_dir : string, optional
+    Name of the peaks directions volume to be saved
+    (default 'peaks_dirs.nii.gz')
+out_peaks_values : string, optional
+    Name of the peaks values volume to be saved
+    (default 'peaks_values.nii.gz')
+out_peaks_indices : string, optional
+    Name of the peaks indices volume to be saved
+    (default 'peaks_indices.nii.gz')
+out_gfa : string, optional
+    Name of the generalise fa volume to be saved (default 'gfa.nii.gz')
